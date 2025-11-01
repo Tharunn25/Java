@@ -1,37 +1,24 @@
-
 import java.util.Scanner;
 
 public class Calculator {
-
     public static void main(String[] args) {
+        Scanner th = new Scanner(System.in);
 
-        int sum;
+        System.out.println("Please Enter the first Number : ");
+        int n1 = th.nextInt();
 
-        Scanner in = new Scanner(System.in);
+        System.out.println("Please Enter the Second Number : ");
+        int n2 = th.nextInt();
 
-        System.out.println("Enter the first number for the Calculation: ");
-        int num1 = in.nextInt();
+        int sum = n1 + n2;
+        int difference = n1 - n2;
+        int product = n1 * n2;
+        double remainder = n1 / n2;
 
-        System.out.println("Enter the second number for the Calculation: ");
-        int num2 = in.nextInt();
+        System.out.println("The sum is : " + sum);
+        System.out.println("The difference is : " + difference);
+        System.out.println("The product is : " + product);
+        System.out.println("The remainder is : " + remainder);
 
-        System.out.println("Enter the operation you want to perform");
-        String operation = in.next();
-
-        if(operation.equals("add")){
-            System.out.println(num1+num2);
-        }
-        else if(operation.equals("sub")){
-            System.out.println(num1-num2);
-        }
-        else if(operation.equals("mul")){
-            System.out.println(num1*num2);
-        }
-        else if(operation.equals("div")){
-            System.out.println(num1/num2);
-        }
-        else{
-            System.out.println("Please Enter valid operation name");
-        }
-    }    
+    }
 }
