@@ -7,6 +7,9 @@ public class personalInformation {
 
         System.out.println("Enter your name : ");
         String name = ns.nextLine();
+
+        System.out.println("Enter your Last Name : ");
+        String lastName = ns.nextline();
         
 
         System.out.println("Please Enter your age : ");
