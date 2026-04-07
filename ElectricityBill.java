@@ -1,26 +1,25 @@
-// 0–100 units → ₹5 per unit
-// 101–200 units → ₹7 per unit
-// Above 200 units → ₹10 per unit
-
-
-import java.util.Scanner;
-
+import java.util.*;
 public class ElectricityBill {
-
     public static void main(String[] args) {
+
         Scanner ns = new Scanner(System.in);
+        int rate;
 
-        System.out.println("Please Enter the units of electricity Consumed: ");
-        double units = ns.nextDouble();
+        System.out.println("Enter the number of electricity units consumed : ");
+        double unit = ns.nextDouble();
 
-        if(units >= 0 && units <= 100){
-            System.out.println("Per unit cost is 5 rs");
-        }
-        else if(units >= 101 && units <= 200){
-            System.out.println("Per unit cost is 7 rs");
+        if(unit >= 0 && unit <=100){
+            rate = 5;
+        } else if (unit >= 100 || unit <= 200) {
+            rate = 7;
         }
         else{
-            System.out.println("Per unit cost is 10 rs");
+            rate = 10;
         }
-    }    
+
+        double billAmount = unit * rate;
+
+        System.out.printf("Your unit consumed is %.2f  and rate for the same is %.2f%n",unit,rate);
+        System.out.printf("Your total bill is %.2f%n",billAmount);
+    }
 }
